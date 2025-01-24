@@ -1,7 +1,11 @@
-# Domaine ou localhost
-{$SERVER_NAME:localhost} {
+{$SERVER_NAME} {
+  # Définit le répertoire racine des fichiers
   root * /usr/share/caddy
+  
+  # Active le serveur de fichiers
   file_server
+  
+  # Configure les logs
   log {
     output stderr
     format json
