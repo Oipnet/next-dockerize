@@ -2,8 +2,6 @@ FROM node:20-alpine as builder
 
 WORKDIR /app
 
-RUN pwd
-
 COPY package*.json .
 
 RUN npm install
@@ -41,8 +39,7 @@ RUN addgroup -g 1001 caddygroup && \
 COPY --from=builder-production /app/out .
 
 RUN chown -R caddyuser:caddygroup /usr/share/caddy && \
-    setfacl -m u:caddyuser:rwx /data && \
-    setfacl -d -m u:caddyuser:rwx /data
+    chown -R caddyuser:caddygroup /data
 
 USER caddyuser
 
