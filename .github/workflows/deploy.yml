@@ -20,6 +20,8 @@ jobs:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
       - name: Deploy to VPS
+        env:
+          SERVER_NAME: ${{ vars.SERVER_NAME }}
         run: |
           ssh -o StrictHostKeyChecking=no root@51.15.209.187 << 'EOF'
           cd /opt/next-dockerize
