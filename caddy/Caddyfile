@@ -1,5 +1,5 @@
 # Domaine ou localhost
-next.local {
+{$SERVER_NAME:localhost} {
   root * /usr/share/caddy
   file_server
   log {
