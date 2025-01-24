@@ -1,4 +1,4 @@
-{$SERVER_NAME} {
+{$SERVER_NAME:localhost} {
   # Définit le répertoire racine des fichiers
   root * /usr/share/caddy
   
