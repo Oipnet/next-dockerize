@@ -23,7 +23,7 @@ jobs:
         env:
           SERVER_NAME: ${{ vars.SERVER_NAME }}
         run: |
-          ssh -o StrictHostKeyChecking=no root@51.15.209.187 << 'EOF'
+          ssh -o StrictHostKeyChecking=no root@151.115.77.139 << 'EOF'
           cd /opt/next-dockerize
           git pull origin main
           docker compose pull
