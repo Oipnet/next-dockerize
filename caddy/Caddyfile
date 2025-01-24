@@ -1,0 +1,9 @@
+# Domaine ou localhost
+next.local {
+  root * /usr/share/caddy
+  file_server
+  log {
+    output stderr
+    format json
+  }
+}
