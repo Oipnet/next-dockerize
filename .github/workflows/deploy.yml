@@ -25,6 +25,7 @@ jobs:
         run: |
           ssh -o StrictHostKeyChecking=no root@151.115.77.139 << 'EOF'
           cd /opt/next-dockerize
+          echo $SERVER_NAME
           git pull origin main
           docker compose pull
           docker compose -f compose.production.yaml up -d --build
