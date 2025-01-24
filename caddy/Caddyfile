@@ -1,6 +1,6 @@
 # Domaine ou localhost
 {$SERVER_NAME:localhost} {
-  root * /usr/share/caddy
+  root /usr/share/caddy
   file_server
   log {
     output stderr
