@@ -8,4 +8,4 @@ services:
       - "443:443"
     environment:
       - NODE_ENV=production
-      - SERVER_NAME=${SERVER_NAME}
+      - SERVER_NAME=${SERVER_NAME:-default.local}
