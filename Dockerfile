@@ -36,7 +36,7 @@ RUN apk add --no-cache acl
 RUN addgroup -g 1001 caddygroup && \
     adduser -u 1001 -G caddygroup -s /bin/sh -D caddyuser
 
-COPY --from=builder-production /app/out .
+# COPY --from=builder-production /app/out .
 
 RUN chown -R caddyuser:caddygroup /usr/share/caddy && \
     chown -R caddyuser:caddygroup /data
