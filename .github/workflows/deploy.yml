@@ -27,7 +27,7 @@ jobs:
         run: |
           ssh -o StrictHostKeyChecking=no root@151.115.77.139 << 'EOF'
           export SERVER_NAME=${SERVER_NAME}
-          echo ${SEVER_NAME}
+          echo "SERVER_NAME on remote : ${SERVER_NAME}" 1>&2
           cd /opt/next-dockerize
           git pull origin main
           docker compose pull
