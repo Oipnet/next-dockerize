@@ -25,7 +25,7 @@ COPY --from=development /app/node_modules /app/node_modules
 
 COPY . .
 
-RUN npm run build
+# RUN npm run build
 
 FROM caddy:2.9.1-alpine as production
 
